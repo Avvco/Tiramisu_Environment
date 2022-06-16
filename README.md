@@ -33,3 +33,10 @@ vagrant halt
 ```bash
 vagrant destroy
 ```
+
+## Prerequisites
+
+You need to have:
+
+- [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads) installed
+- [Vargrant](https://www.vagrantup.com/downloads) installed
