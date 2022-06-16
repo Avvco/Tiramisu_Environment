@@ -16,6 +16,14 @@ At the project root directory
 vagrant up
 ```
 
+then
+
+```bash
+vagrant ssh
+```
+
+to login into your virtualbox
+
 ## If Docker does not Install Successfully
 
 ```bash
