@@ -22,7 +22,7 @@ then
 vagrant ssh
 ```
 
-to login into your virtualbox
+to log into your virtualbox
 
 ## If Docker does not Install Successfully
 
