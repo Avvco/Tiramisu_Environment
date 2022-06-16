@@ -22,7 +22,7 @@ then
 vagrant ssh
 ```
 
-to log into your virtualbox
+to log into your VirtualBox
 
 ## If Docker does not Install Successfully
 
@@ -48,3 +48,9 @@ You need to have:
 
 - [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads) installed
 - [Vargrant](https://www.vagrantup.com/downloads) installed
+
+## About GitHub Authentication
+
+- Username is your [GitHub](https://github.com/) username
+- Password is your [Personal access tokens](https://github.com/settings/tokens)
+- You will need to set it for every time you create a new VirtualBox
