@@ -53,7 +53,7 @@ You need to have:
 
 - Username is your [GitHub](https://github.com/) username
 - Password is your [Personal access tokens](https://github.com/settings/tokens)
-- You will need to entry it for every time you clone, pull or push to repostory
+- You will need to enter it every time you clone, pull or push to the repository, so it is recommended to store your Personal access tokens somewhere in your VirtualBox
 
 ## About Git config
 
