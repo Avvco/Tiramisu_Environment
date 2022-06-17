@@ -53,4 +53,18 @@ You need to have:
 
 - Username is your [GitHub](https://github.com/) username
 - Password is your [Personal access tokens](https://github.com/settings/tokens)
-- You will need to set it for every time you create a new VirtualBox
+- You will need to entry it for every time you clone, pull or push to repostory
+
+## About Git config
+
+You have to set the git config into your VirtualBox by the following command every time when you create a new VirtualBox
+
+```bash
+git config --global user.name "YOUR_GIT_USERNAME"
+```
+
+and
+
+```bash
+git config --global user.email "YOUR_EMAIL"
+```
