@@ -34,20 +34,12 @@ Vagrant.configure("2") do |config|
   # via 127.0.0.1 to disable public access
   # config.vm.network "forwarded_port", guest: 9000, host: 9000, host_ip: "127.0.0.1"
 
-  # 9000 sprint boot
-  config.vm.network "forwarded_port", guest: 9000, host: 9000
-
-  # 9020 hapi-fhir
-  config.vm.network "forwarded_port", guest: 9020, host: 9020
-
-  # 9999 vscode server
-  config.vm.network "forwarded_port", guest: 9999, host: 9999
-
-  # 80 nginx
+  # Open port 80 and 8000 ~ 11999 which 8000 and 11999 are inclusive
   config.vm.network "forwarded_port", guest: 80, host: 80
 
-  # 8081 php phpMyAdmin
-  config.vm.network "forwarded_port", guest: 8081, host: 8081
+  for i in 8000..11999
+    config.vm.network :"forwarded_port", guest: i, host: i
+  end
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
