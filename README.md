@@ -68,3 +68,11 @@ and
 ```bash
 git config --global user.email "YOUR_EMAIL"
 ```
+
+## About PGP Error
+
+If you have PGP error, tnen
+
+```bash
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+```
