@@ -49,6 +49,14 @@ You need to have:
 - [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads) installed
 - [Vargrant](https://www.vagrantup.com/downloads) installed
 
+## Default Port Mapping
+
+- 80 : 80
+- 8081 : 8081
+- 64500~64550 : 64500~64550
+
+You can change is inside Vagrantfile
+
 ## About GitHub Authentication
 
 - Username is your [GitHub](https://github.com/) username
