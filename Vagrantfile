@@ -34,19 +34,13 @@ Vagrant.configure("2") do |config|
   # via 127.0.0.1 to disable public access
   # config.vm.network "forwarded_port", guest: 9000, host: 9000, host_ip: "127.0.0.1"
 
-  # Open port 80, 8081, 3000, 3001 and 64500 ~ 64550 which 65500 and 65550 are inclusive
+  # Open port 80, 8081, and 64500 ~ 64550 which 65500 and 65550 are inclusive
 
   # Nginx
   config.vm.network :"forwarded_port", guest: 80, host: 80
 
   # phpMyAdmin
   config.vm.network :"forwarded_port", guest: 8081, host: 8081
-
-  # WORKSPACE_BROWSERSYNC_HOST_PORT
-  config.vm.network :"forwarded_port", guest: 3000, host: 3000
-
-  # WORKSPACE_BROWSERSYNC_UI_HOST_PORT
-  config.vm.network :"forwarded_port", guest: 3001, host: 3001
 
   for i in 64500..64550
     config.vm.network :"forwarded_port", guest: i, host: i
