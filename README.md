@@ -53,7 +53,7 @@ You need to have:
 
 - 80 : 80
 - 8081 : 8081
-- 64500~64550 : 64500~64550
+- 64500 ~ 64550 : 64500 ~ 64550
 
 You can change is inside Vagrantfile
 
