@@ -105,6 +105,7 @@ Vagrant.configure("2") do |config|
   # run only when vm iniitialize
   config.vm.provision :shell, privileged: true, path: "./installTools.sh"
   config.vm.provision :shell, privileged: true, path: "./installDocker.sh"
+  config.vm.provision :reload
   
   # =================================================================
 end
