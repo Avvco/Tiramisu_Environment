@@ -24,7 +24,7 @@ vagrant ssh
 
 to log into your VirtualBox
 
-## If Docker does not Install Successfully
+## If You Need to Reinstall Something
 
 ```bash
 vagrant reload --provision
@@ -80,3 +80,13 @@ and
 ```bash
 git config --global user.email "YOUR_EMAIL"
 ```
+
+## How to Connect Visual Studio Code into Vagrant via SSH
+
+Inside your VSCode, press `F1` then enter `Remote-SSH: Open SSH Configuration File...`, choose the file ending with `\.ssh\config`.
+
+Open a terminal in the same layer of your `Vagrantfile`, then enter `vagrant ssh-config`.
+
+Append the file you open in `\.ssh\config` with the output of `vagrant ssh-config`.
+
+In the left bar, select `Remote Explorer`, then choose `SSH Targets`, you should able to see the VM you added.
