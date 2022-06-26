@@ -81,7 +81,7 @@ and
 git config --global user.email "YOUR_EMAIL"
 ```
 
-## How to Connect Visual Studio Code into Vagrant via SSH
+## How to Connect Visual Studio Code to Vagrant via SSH
 
 Inside your VSCode, press `F1` then enter `Remote-SSH: Open SSH Configuration File...`, choose the file ending with `\.ssh\config`.
 
@@ -90,3 +90,7 @@ Open a terminal in the same layer of your `Vagrantfile`, then enter `vagrant ssh
 Append the file you open in `\.ssh\config` with the output of `vagrant ssh-config`.
 
 In the left bar, select `Remote Explorer`, then choose `SSH Targets`, you should able to see the VM you added.
+
+Choose `Linux` if OS is asked.
+
+You should add your extension into SSH manually.
