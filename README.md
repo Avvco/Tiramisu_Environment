@@ -57,6 +57,10 @@ You need to have:
 
 You can change is inside Vagrantfile
 
+## About Project Location
+
+Suggested put your project under `/home/vagrant`
+
 ## About GitHub Authentication
 
 - Username is your [GitHub](https://github.com/) username
