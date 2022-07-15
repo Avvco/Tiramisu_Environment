@@ -2,7 +2,6 @@
 
 # install docker
 apt-get remove docker docker-engine docker.io containerd runc
-apt-get remove docker-compose-plugin
 apt-get update
 apt-get install \
        ca-certificates \
@@ -10,7 +9,7 @@ apt-get install \
        gnupg           \
        lsb-release
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --batch --yes --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 echo                                                                                      \
       "deb [arch=$(dpkg --print-architecture)                                               \
@@ -23,6 +22,12 @@ apt-get update
 apt-get -y install docker-ce docker-ce-cli containerd.io
 
 # install docker-compose
-apt-get -y install docker-compose 
-docker-compose --version
+rm -rf /usr/local/bin/docker-compose
+DOCKER_COMPOSE_VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | grep -Po '"tag_name": "\K.*\d')
+curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" \
+      -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 
+# check installation
+docker-compose --version
+docker --version
