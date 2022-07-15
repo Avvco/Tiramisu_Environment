@@ -2,6 +2,7 @@
 
 # install docker
 apt-get remove docker docker-engine docker.io containerd runc
+apt-get remove docker-compose-plugin
 apt-get update
 apt-get install \
        ca-certificates \
@@ -22,7 +23,6 @@ apt-get update
 apt-get -y install docker-ce docker-ce-cli containerd.io
 
 # install docker-compose
-curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" \
-      -o /usr/local/bin/docker-compose
+apt-get -y install docker-compose-plugin
+docker-compose --version
 
-chmod +x /usr/local/bin/docker-compose
