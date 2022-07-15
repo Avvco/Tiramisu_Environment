@@ -51,17 +51,11 @@ Vagrant.configure("2") do |config|
   # via 127.0.0.1 to disable public access
   # config.vm.network "forwarded_port", guest: 9000, host: 9000, host_ip: "127.0.0.1"
 
-  # Open port 80, 8081, and 64500 ~ 64550 which 65500 and 65550 are inclusive
+  # Open port 80 and 443
 
   # Nginx
   config.vm.network :"forwarded_port", guest: 80, host: 80
-
-  # phpMyAdmin
-  config.vm.network :"forwarded_port", guest: 8081, host: 8081
-
-  for i in 64500..64550
-    config.vm.network :"forwarded_port", guest: i, host: i
-  end
+  config.vm.network :"forwarded_port", guest: 443, host: 443
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
