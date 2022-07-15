@@ -23,6 +23,6 @@ apt-get update
 apt-get -y install docker-ce docker-ce-cli containerd.io
 
 # install docker-compose
-apt-get -y install docker-compose-plugin
+apt-get -y install docker-compose 
 docker-compose --version
 
