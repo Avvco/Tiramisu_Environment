@@ -52,8 +52,7 @@ You need to have:
 ## Default Port Mapping
 
 - 80 : 80
-- 8081 : 8081
-- 64500 ~ 64550 : 64500 ~ 64550
+- 443 : 443
 
 You can change is inside Vagrantfile
 
