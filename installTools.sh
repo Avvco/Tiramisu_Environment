@@ -16,7 +16,3 @@ JAVA_HOME="/usr/lib/jvm/jdk-18"
 rm -f /etc/profile.d/java_env.sh
 echo JAVA_HOME=$JAVA_HOME > /etc/profile.d/java_env.sh
 echo PATH=${PATH}:$JAVA_HOME/bin >> /etc/profile.d/java_env.sh
-
-
-# Give vagrant permission
-chown -R vagrant /home/vagrant

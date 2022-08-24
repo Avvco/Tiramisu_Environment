@@ -1,6 +1,6 @@
 # Tiramisu_Environment
 
-This is the vagrant environment of [Tiramisu](https://github.com/Avvco/Tiramisu)
+This is the set vagrant environment base on ubuntu 20.04 with docker installed.
 
 ## Installation
 
@@ -36,11 +36,13 @@ vagrant reload --provision
 vagrant halt
 ```
 
-## How to Delete
+## How to Delete VM
 
 ```bash
 vagrant destroy
 ```
+
+All associated files for this VM will be deleted.
 
 ## Prerequisites
 
@@ -55,10 +57,6 @@ You need to have:
 - 443 : 443
 
 You can change is inside Vagrantfile
-
-## About Project Location
-
-Suggested put your project under `/home/vagrant`
 
 ## About GitHub Authentication
 
