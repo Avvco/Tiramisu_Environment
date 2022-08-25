@@ -3,7 +3,7 @@
 
 
 # Check plugins
-required_plugins = %w(vagrant-reload)
+required_plugins = %w(vagrant-reload vagrant-timezone)
 
 plugins_to_install = required_plugins.select { |plugin| not Vagrant.has_plugin? plugin }
 if not plugins_to_install.empty?
@@ -95,6 +95,9 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
+
+  # Set the timezone that matches the host
+  config.timezone.value = :host
 
   # run only when vm iniitialize
   config.vm.provision :shell, privileged: true, path: "./createSwap.sh"
