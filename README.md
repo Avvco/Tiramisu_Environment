@@ -49,7 +49,7 @@ All associated files for this VM will be deleted.
 You need to have:
 
 - [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads) installed
-- [Vargrant](https://www.vagrantup.com/downloads) installed
+- [Vagrant](https://www.vagrantup.com/downloads) installed
 
 ## Default Port Mapping
 
