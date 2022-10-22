@@ -4,7 +4,7 @@ apt install net-tools --fix-missing
 
 
 # Install jdk
-JAVA_VERSION="19"
+JAVA_VERSION="18"
 
 apt-get update
 apt-get install -y wget
