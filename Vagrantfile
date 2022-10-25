@@ -51,11 +51,15 @@ Vagrant.configure("2") do |config|
   # via 127.0.0.1 to disable public access
   # config.vm.network "forwarded_port", guest: 9000, host: 9000, host_ip: "127.0.0.1"
 
-  # Open port 80 and 443
+  # Open port 80, 443 and 64540 ~ 64550 which 64540 and 64550 are inclusive
 
   # Nginx
   config.vm.network :"forwarded_port", guest: 80, host: 80
   config.vm.network :"forwarded_port", guest: 443, host: 443
+
+  for i in 64540..64550
+    config.vm.network :"forwarded_port", guest: i, host: i
+  end
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -84,7 +88,7 @@ Vagrant.configure("2") do |config|
       #vb.gui = true
   #
   # Customize the amount of memory on the VM:
-    vb.memory = "2048"
+    vb.memory = "8192"
     vb.cpus = 2
   end
 

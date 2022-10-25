@@ -55,6 +55,7 @@ You need to have:
 
 - 80 : 80
 - 443 : 443
+- 64540~64550 : 64540~64550
 
 You can change is inside Vagrantfile
 
