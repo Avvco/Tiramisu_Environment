@@ -57,7 +57,7 @@ You need to have:
 - 443 : 443
 - 64540 ~ 64550 : 64540 ~ 64550
 
-You can change is inside Vagrantfile
+You can change it inside Vagrantfile
 
 ## About GitHub Authentication
 
