@@ -84,8 +84,8 @@ git config --global user.email "YOUR_EMAIL"
 You need to have all the following VSCode extensions installed:
 
 - [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
-- [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-- [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
+- [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
 - [Remote - SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit)
 
 ### Steps
@@ -93,7 +93,7 @@ You need to have all the following VSCode extensions installed:
 1. Inside your VSCode, press `F1` then enter `Remote-SSH: Open SSH Configuration File...`, choose the one which ending with `\.ssh\config`.
 2. Open a terminal in the same directory of your `Vagrantfile`, then enter `vagrant ssh-config` in the terminal.
 3. Append and save the file you open in `\.ssh\config` with the output of `vagrant ssh-config`.
-4. In the left bar, select `Remote Explorer`, then choose `SSH Targets`, you should able to see the VM you added.
+4. In the left bar, select `Remote Explorer`, then choose `Remote`, you should able to see the VM you added, refresh may be required.
 
 ### Remark
 
