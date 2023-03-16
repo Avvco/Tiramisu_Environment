@@ -3,7 +3,7 @@
 
 
 # Check plugins
-required_plugins = %w(vagrant-reload vagrant-timezone)
+required_plugins = %w(vagrant-reload vagrant-timezone vagrant-disksize)
 
 plugins_to_install = required_plugins.select { |plugin| not Vagrant.has_plugin? plugin }
 if not plugins_to_install.empty?
@@ -31,6 +31,9 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "Tiramisu"
 
   config.vm.define "TiramisuVM"
+
+  # Customize the amount of disk on the VM:
+  config.disksize.size = '60GB'
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
