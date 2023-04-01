@@ -2,6 +2,7 @@ apt-get update
 apt install tmux -y
 apt install net-tools --fix-missing -y
 apt install inotify-tools -y
+apt install jq -y
 
 
 # Install jdk
