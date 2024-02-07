@@ -1,7 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-
 # Check plugins
 required_plugins = %w(vagrant-reload vagrant-timezone vagrant-disksize)
 
@@ -26,7 +25,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/focal64"
+  config.vm.box = "ubuntu/jammy64"
 
   config.vm.hostname = "Tiramisu"
 
@@ -40,8 +39,10 @@ Vagrant.configure("2") do |config|
   # `vagrant box outdated`. This is not recommended.
   config.vm.box_check_update = true
 
+
   # Increase the boot timeout time
   config.vm.boot_timeout = 1200
+
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -56,10 +57,9 @@ Vagrant.configure("2") do |config|
 
   # Open port 80, 443 and 64540 ~ 64550 which 64540 and 64550 are inclusive
 
-  # Nginx
   config.vm.network :"forwarded_port", guest: 80, host: 80
   config.vm.network :"forwarded_port", guest: 443, host: 443
-
+  
   for i in 64540..64550
     config.vm.network :"forwarded_port", guest: i, host: i
   end
@@ -110,6 +110,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, privileged: true, path: "./createSwap.sh"
   config.vm.provision :shell, privileged: true, path: "./installTools.sh"
   config.vm.provision :shell, privileged: true, path: "./installDocker.sh"
+  config.vm.provision :shell, privileged: true, path: "./installk8s.sh"
   config.vm.provision :reload
   config.vm.provision :shell, privileged: true, path: "./startup.sh", run: 'always'
   

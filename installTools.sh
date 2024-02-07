@@ -3,10 +3,10 @@ apt install tmux -y
 apt install net-tools --fix-missing -y
 apt install inotify-tools -y
 apt install jq -y
-
+snap install btop
 
 # Install jdk
-JAVA_VERSION="17"
+JAVA_VERSION="21"
 
 apt-get update
 apt-get install -y wget
