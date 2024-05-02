@@ -1,6 +1,6 @@
 # Tiramisu_Environment
 
-This is the set vagrant environment base on ubuntu 20.04 with docker installed.
+This is the set vagrant environment based on ubuntu 22.04 with docker installed.
 
 ## Installation
 
