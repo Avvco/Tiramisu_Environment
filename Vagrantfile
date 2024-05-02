@@ -55,6 +55,9 @@ Vagrant.configure("2") do |config|
   # via 127.0.0.1 to disable public access
   # config.vm.network "forwarded_port", guest: 9000, host: 9000, host_ip: "127.0.0.1"
 
+  # Create a ssh forwarded port that allows access to the VM from any ip via ssh
+  config.vm.network :"forwarded_port", guest: 22, host: 2222, host_ip: "0.0.0.0", id: "ssh", auto_correct: true
+
   # Open port 80, 443 and 64540 ~ 64550 which 64540 and 64550 are inclusive
 
   config.vm.network :"forwarded_port", guest: 80, host: 80
@@ -63,6 +66,9 @@ Vagrant.configure("2") do |config|
   for i in 64540..64550
     config.vm.network :"forwarded_port", guest: i, host: i
   end
+
+  # Enable ssh forward agent
+  config.ssh.forward_agent = true
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
