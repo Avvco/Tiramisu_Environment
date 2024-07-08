@@ -31,3 +31,6 @@ chmod +x /usr/local/bin/docker-compose
 # check installation
 docker-compose --version
 docker --version
+
+# add vagrant to docker group
+usermod -aG docker docker
