@@ -33,4 +33,4 @@ docker-compose --version
 docker --version
 
 # add vagrant to docker group
-usermod -aG docker docker
+usermod -aG docker vagrant
